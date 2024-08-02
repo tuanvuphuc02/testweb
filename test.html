@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Text</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .running-text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 40em;
+            color: black; /* Change text color if necessary */
+            animation: runText 3s linear infinite;
+            z-index: 2; /* Ensure it stays on top of other elements */
+        }
+
+        @keyframes runText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .background-image {
+            position: absolute;
+            top: 10px; /* Adjust the vertical position */
+            right: 10px; /* Adjust the horizontal position */
+            width: 200px; /* Adjust the size as needed */
+            height: auto;
+            z-index: 1; /* Ensure it stays behind the running text */
+        }
+    </style>
+</head>
+<body>
+    <div class="running-text">Nhiễu</div>
+    <img src="linhdieu.jpg" alt="High Resolution" class="background-image">
+</body>
+</html>
